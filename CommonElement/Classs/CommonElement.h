@@ -8,7 +8,7 @@
 
 #ifndef CommonElement_h
 #define CommonElement_h
-
+/*
 // Foundation
 #import "NSObject+BinAdd.h"
 #import "NSDate+BinAdd.h"
@@ -36,5 +36,5 @@
 #import "CommonUtils.h"
 #import "CommonUtils+Custom.h"
 #import "DateUtil.h"
-
+*/
 #endif /* CommonElement_h */

@@ -254,7 +254,6 @@
 				CE4E004C1D058491005CBB4D /* CommonElement.h */,
 				CE25F6CB1D0031BB00F96382 /* Category */,
 				CE25F6CC1D0031BB00F96382 /* CommonUtils */,
-				CE25F6CD1D0031BB00F96382 /* NetWork */,
 			);
 			path = Classs;
 			sourceTree = "<group>";
@@ -279,13 +278,6 @@
 				CE25F6EB1D00344D00F96382 /* DateUtil.m */,
 			);
 			path = CommonUtils;
-			sourceTree = "<group>";
-		};
-		CE25F6CD1D0031BB00F96382 /* NetWork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetWork;
 			sourceTree = "<group>";
 		};
 		CE25F6F51D00400400F96382 /* Foundation */ = {
