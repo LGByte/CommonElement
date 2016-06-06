@@ -9,5 +9,8 @@
 #ifndef CommonUtilsAdd_h
 #define CommonUtilsAdd_h
 
+#import "CommonUtils.h"
+#import "CommonUtils+Custom.h"
+#import "DateUtil.h"
 
 #endif /* CommonUtilsAdd_h */
