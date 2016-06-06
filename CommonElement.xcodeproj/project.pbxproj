@@ -92,6 +92,7 @@
 		CE4E00441D051A77005CBB4D /* UIGestureRecognizer+BinAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BinAdd.m"; sourceTree = "<group>"; };
 		CE4E00471D051B5B005CBB4D /* UIColor+BinAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BinAdd.h"; sourceTree = "<group>"; };
 		CE4E00481D051B5B005CBB4D /* UIColor+BinAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BinAdd.m"; sourceTree = "<group>"; };
+		CE4E004A1D055472005CBB4D /* CategoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAdd.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +261,7 @@
 		CE25F6CB1D0031BB00F96382 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CE4E004A1D055472005CBB4D /* CategoryAdd.h */,
 				CE25F6F51D00400400F96382 /* Foundation */,
 				CE25F6FA1D00400400F96382 /* UIKit */,
 			);
