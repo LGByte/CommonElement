@@ -1,13 +1,13 @@
 //
-//  CategoryAdd.h
+//  CommonElement.h
 //  CommonElement
 //
 //  Created by 熊彬 on 16/6/6.
 //  Copyright © 2016年 熊彬. All rights reserved.
 //
 
-#ifndef CategoryAdd_h
-#define CategoryAdd_h
+#ifndef CommonElement_h
+#define CommonElement_h
 
 // Foundation
 #import "NSObject+BinAdd.h"
@@ -32,5 +32,9 @@
 #import "UIView+FrameExtention.h"
 #import "UIControl+BinAdd.h"
 
+// CommonUtils
+#import "CommonUtils.h"
+#import "CommonUtils+Custom.h"
+#import "DateUtil.h"
 
-#endif /* CategoryAdd_h */
+#endif /* CommonElement_h */

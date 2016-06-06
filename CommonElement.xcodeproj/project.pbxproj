@@ -92,8 +92,7 @@
 		CE4E00441D051A77005CBB4D /* UIGestureRecognizer+BinAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BinAdd.m"; sourceTree = "<group>"; };
 		CE4E00471D051B5B005CBB4D /* UIColor+BinAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BinAdd.h"; sourceTree = "<group>"; };
 		CE4E00481D051B5B005CBB4D /* UIColor+BinAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BinAdd.m"; sourceTree = "<group>"; };
-		CE4E004A1D055472005CBB4D /* CategoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAdd.h; sourceTree = "<group>"; };
-		CE4E004B1D055B08005CBB4D /* CommonUtilsAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtilsAdd.h; sourceTree = "<group>"; };
+		CE4E004C1D058491005CBB4D /* CommonElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonElement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +251,7 @@
 		CE25F6CA1D00316000F96382 /* Classs */ = {
 			isa = PBXGroup;
 			children = (
+				CE4E004C1D058491005CBB4D /* CommonElement.h */,
 				CE25F6CB1D0031BB00F96382 /* Category */,
 				CE25F6CC1D0031BB00F96382 /* CommonUtils */,
 				CE25F6CD1D0031BB00F96382 /* NetWork */,
@@ -262,7 +262,6 @@
 		CE25F6CB1D0031BB00F96382 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				CE4E004A1D055472005CBB4D /* CategoryAdd.h */,
 				CE25F6F51D00400400F96382 /* Foundation */,
 				CE25F6FA1D00400400F96382 /* UIKit */,
 			);
@@ -272,7 +271,6 @@
 		CE25F6CC1D0031BB00F96382 /* CommonUtils */ = {
 			isa = PBXGroup;
 			children = (
-				CE4E004B1D055B08005CBB4D /* CommonUtilsAdd.h */,
 				CE25F6E61D00344D00F96382 /* CommonUtils.h */,
 				CE25F6E71D00344D00F96382 /* CommonUtils.m */,
 				CE25F6E81D00344D00F96382 /* CommonUtils+Custom.h */,
