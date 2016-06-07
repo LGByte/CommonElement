@@ -128,78 +128,6 @@ static CGRect oldframe;
     [fileManager removeItemAtPath:imageDir error:nil];
 }
 
-+(NSString *)trimStr:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]]){
-        return nil;
-    }else{
-        return [NSString stringWithFormat:@"%@",obj];
-    }
-}
-
-+(NSDictionary *)trimDic:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]] || ![obj isKindOfClass:[NSDictionary class]]){
-        return nil;
-    }else{
-        return obj;
-    }
-}
-
-+(NSDate *)trimDate:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]]){
-        return nil;
-    }else{
-        if([obj isKindOfClass:[NSString class]]){
-            NSNumber *milSec = [NSNumber numberWithLongLong:[obj longLongValue]];
-            return [NSDate dateWithTimeIntervalSince1970:milSec.doubleValue/1000];
-        }else{
-            return nil;
-        }
-    }
-}
-
-+(NSNumber *)trimDouble:(id)obj{
-
-    if(!obj || [obj isKindOfClass:[NSNull class]]){
-        return nil;
-    }else{
-        if([obj isKindOfClass:[NSNumber class]]){
-            return obj;
-        }else{
-            NSString *numStr = [NSString stringWithFormat:@"%@",obj];
-            numStr = [numStr stringByReplacingOccurrencesOfString:@"," withString:@""];
-            return [NSNumber numberWithDouble:[numStr doubleValue]];
-        }
-    }
-}
-
-+(NSNumber *)trimInt:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]]){
-        return nil;
-    }else{
-        return [NSNumber numberWithInt:[obj integerValue]];
-    }
-}
-
-+(NSArray *)trimArray:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]] || ![obj isKindOfClass:[NSArray class]]){
-        return nil;
-    }else{
-        return obj;
-    }
-}
-
-+(BOOL)trimBool:(id)obj{
-    if(!obj || [obj isKindOfClass:[NSNull class]]){
-        return NO;
-    }else{
-        if([@"0"isEqualToString:obj]){
-            return NO;
-        }else{
-            return YES;
-        }
-    }
-}
-
 
 
 +(void)showDialogWithTaget:(nullable id)taget andTitle:(NSString *)title message:(NSString *)msg delegate:(nullable id)delegate
@@ -327,27 +255,9 @@ static CGRect oldframe;
     return nil;
 }
 
-+(void)printRect:(CGRect)rect comment:(NSString *)comment{
-
-}
 
 
-+(CGFloat)getTextLen:(NSString *)text textFont:(UIFont *)font
-{
-    CGFloat len = 0.0f;
-    UIFont *tempFont = (font)?font:[UIFont systemFontOfSize:14.0f];
-    if(![self isStringNilOrEmpty:text]){
-        
-        if([text respondsToSelector:@selector(sizeWithAttributes:)]){
-            NSDictionary *dict = [NSDictionary dictionaryWithObject:tempFont forKey:NSFontAttributeName];
-            len = [text sizeWithAttributes:dict].width;
-        }else{
-            len = [text sizeWithFont:tempFont].width;
-        }
-    }
-    
-    return len;
-}
+
 
 +(NSInteger)getUnicodeLengthForStr:(NSString*)strtemp{
     int strlength = 0;
@@ -643,27 +553,6 @@ static CGRect oldframe;
         return [NSDate dateWithTimeIntervalSince1970:[d longLongValue]/1000];
     }
 }
-
-+(CGFloat)getAccountNameLen:(NSString *)text textFont:(UIFont *)font
-{
-    CGFloat len = 0.0f;
-    UIFont *tempFont = (font)?font:[UIFont systemFontOfSize:14.0f];
-    //    if(![self isStringNilOrEmpty:text]){
-    //        if([text respondsToSelector:@selector(sizeWithAttributes:)]){
-    //            len = [text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil]].width;
-    //        }else{
-    //            len = [text sizeWithFont:tempFont].width;
-    //
-    //        }
-    //    }
-    
-    
-    len = [text sizeWithFont:tempFont].width;
-    
-    return len;
-}
-
-
 
 //eg:ffffff
 + (UIColor *)getColorFromHex:(NSString*)hexValue

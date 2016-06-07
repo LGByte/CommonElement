@@ -165,21 +165,6 @@
     }
 }
 
-+(NSString *)getBirthFrom18CardID:(NSString *)cardId{
-    NSString *birthStr = @"";//yyyy-MM-dd
-    if(cardId.length >= 15){
-        NSString *subBirthStr = [cardId substringWithRange:NSMakeRange(6, 8)];
-  
-        if(subBirthStr.length == 8){
-            NSDate *birthDate = [DateUtil getDateFromStr:subBirthStr datePattern:@"yyyyMMdd"];
-            birthStr = [DateUtil formatDate:birthDate datePattern:@"yyyy-MM-dd"];
-        }
-        
-    }
-    
-    return birthStr;
-}
-
 +(NSString *)getGenderFrom18CardID:(NSString *)cardId{
     NSString *genderStr = @"";
     if(cardId.length >= 17){
@@ -267,13 +252,6 @@
     return [UIColor colorWithRed:14/155.0 green:153/255.0 blue:12/255.0 alpha:1.0];
 }
 
-+ (CGFloat)heightForLineWidth:(CGFloat)width font:(UIFont *)font sourceStr:(NSString *)str
-{
-    CGSize size = [str sizeWithFont:font
-                  constrainedToSize:CGSizeMake(width, 30000000.0f)
-                      lineBreakMode: NSLineBreakByCharWrapping];
-    return size.height;
-}
 
 //身份证号
 + (BOOL)validateIdentityCard:(NSString *)cardNo
@@ -358,20 +336,32 @@
     }
 }
 
-+ (CGFloat)getHeightFromString:(NSString *)content ExpectWidth:(CGFloat)width FontSize:(CGFloat)fontSize{
++ (CGFloat)getHeightFromString:(NSString *)content ExpectWidth:(CGFloat)width FontSize:(UIFont *)font{
     
     CGFloat height = 0;
     if (content.length == 0) {
         return height;
     }
-    
-    CGSize aSize;
-    
-    aSize = [content sizeWithFont:[UIFont systemFontOfSize:fontSize] constrainedToSize:CGSizeMake(width, 2220) lineBreakMode:NSLineBreakByTruncatingTail];
-    
-    return aSize.height;
-}
 
+    CGSize result;
+    if (!font) font = [UIFont systemFontOfSize:12];
+    if ([content respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+        NSMutableDictionary *attr = [NSMutableDictionary new];
+        attr[NSFontAttributeName] = font;
+
+        CGRect rect = [content boundingRectWithSize:CGSizeMake(width, HUGE)
+                                         options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                      attributes:attr context:nil];
+        result = rect.size;
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        result = [content sizeWithFont:font constrainedToSize:CGSizeMake(width, HUGE) lineBreakMode:NSLineBreakByTruncatingTail];
+#pragma clang diagnostic pop
+    }
+    
+    return result.height;
+}
 
 ///归档
 + (void)keyedArchiverObject:(id)object ForKey:(NSString *)key ToFile:(NSString *)path

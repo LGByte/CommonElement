@@ -23,27 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSNumber *)numberWithString:(NSString *)string;
 
-#pragma mark - RoundPlain
-///=============================================================================
-/// @name RoundPlain
-///=============================================================================
-/**
- *  @brief  四舍五入 NSRoundPlain
- *
- *  @param scale 限制位数
- *
- *  @return 返回结果
- */
-- (NSDecimalNumber*)roundToScale:(NSUInteger)scale;
-/**
- *  @brief  四舍五入
- *
- *  @param scale        限制位数
- *  @param roundingMode NSRoundingMode
- *
- *  @return 返回结果
- */
-- (NSDecimalNumber*)roundToScale:(NSUInteger)scale mode:(NSRoundingMode)roundingMode;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,7 +15,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <Foundation/Foundation.h>
-#import "DateUtil.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
@@ -88,29 +87,6 @@ NS_ASSUME_NONNULL_BEGIN
 +(CGRect)getFrameInView:(UIView *)child parentView:(Class)parent;
 +(UITableViewCell *)getSuperCell:(UIView *)sub;
 +(UITableView *)getSuperTableView:(UIView *)sub;
-
-+(NSIndexPath *)getCellIndexPathWithTag:(NSInteger)tag tableView:(UITableView *)tableView;
-
-
-/*!
- @method
- @abstract 打印CGRect的值
- @discussion
- @param rect 要打印的CGRect实例
- @param comment 打印说明
- @result 无
- */
-+(void)printRect:(CGRect)rect comment:(NSString *)comment;
-
-/*!
- @method
- @abstract 获取字符串在一定字体下的像素长度
- @discussion
- @param text 要判断的字符串
- @param font 字体
- @result 像素长度
- */
-+(CGFloat)getTextLen:(NSString *)text textFont:(UIFont *)font;
 
 /*!
  @method
@@ -319,17 +295,6 @@ NS_ASSUME_NONNULL_BEGIN
 +(int)getStringLength:(NSString *)text;
 
 +(NSDate *)getDateFromTimeInternalDateStr:(NSString *)d;
-
-+(CGFloat)getAccountNameLen:(NSString *)text textFont:(UIFont *)font;
-
-
-+(NSString *)trimStr:(id)obj;
-+(NSNumber *)trimDouble:(id)obj;
-+(NSDate *)trimDate:(id)obj;
-+(BOOL)trimBool:(id)obj;
-+(NSArray *)trimArray:(id)obj;
-+(NSDictionary *)trimDic:(id)obj;
-+(NSNumber *)trimInt:(id)obj;
 
 //判断是浮点数据类型
 +(BOOL)isPureFloat:(NSString*)string;
