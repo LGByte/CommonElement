@@ -27,7 +27,6 @@
 		CE25F6C31D00314000F96382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25F6C11D00314000F96382 /* LaunchScreen.storyboard */; };
 		CE25F6EE1D00344D00F96382 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25F6E71D00344D00F96382 /* CommonUtils.m */; };
 		CE25F6EF1D00344D00F96382 /* CommonUtils+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25F6E91D00344D00F96382 /* CommonUtils+Custom.m */; };
-		CE25F6F01D00344D00F96382 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25F6EB1D00344D00F96382 /* DateUtil.m */; };
 		CE4E00321D0516D8005CBB4D /* UIView+FrameExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E00311D0516D8005CBB4D /* UIView+FrameExtention.m */; };
 		CE4E00391D051721005CBB4D /* UILabel+FTDLabelExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E00351D051721005CBB4D /* UILabel+FTDLabelExtentions.m */; };
 		CE4E003A1D051721005CBB4D /* UITextField+FFKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E00381D051721005CBB4D /* UITextField+FFKeyBoard.m */; };
@@ -76,8 +75,6 @@
 		CE25F6E71D00344D00F96382 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
 		CE25F6E81D00344D00F96382 /* CommonUtils+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CommonUtils+Custom.h"; sourceTree = "<group>"; };
 		CE25F6E91D00344D00F96382 /* CommonUtils+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CommonUtils+Custom.m"; sourceTree = "<group>"; };
-		CE25F6EA1D00344D00F96382 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
-		CE25F6EB1D00344D00F96382 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		CE4E00301D0516D8005CBB4D /* UIView+FrameExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtention.h"; sourceTree = "<group>"; };
 		CE4E00311D0516D8005CBB4D /* UIView+FrameExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtention.m"; sourceTree = "<group>"; };
 		CE4E00341D051721005CBB4D /* UILabel+FTDLabelExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FTDLabelExtentions.h"; sourceTree = "<group>"; };
@@ -274,8 +271,6 @@
 				CE25F6E71D00344D00F96382 /* CommonUtils.m */,
 				CE25F6E81D00344D00F96382 /* CommonUtils+Custom.h */,
 				CE25F6E91D00344D00F96382 /* CommonUtils+Custom.m */,
-				CE25F6EA1D00344D00F96382 /* DateUtil.h */,
-				CE25F6EB1D00344D00F96382 /* DateUtil.m */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -450,7 +445,6 @@
 				CE18B6EF1D019C5D00BFF139 /* NSObject+BinAdd.m in Sources */,
 				CE18B6D41D017BD600BFF139 /* NSString+BinAdd.m in Sources */,
 				CE4E003A1D051721005CBB4D /* UITextField+FFKeyBoard.m in Sources */,
-				CE25F6F01D00344D00F96382 /* DateUtil.m in Sources */,
 				CE25F6B51D00314000F96382 /* main.m in Sources */,
 				CE18B6DA1D017EB100BFF139 /* NSMutableArray+BinAdd.m in Sources */,
 				CE18B6EB1D019A3000BFF139 /* NSDecimalNumber+BinAdd.m in Sources */,
